@@ -1,5 +1,21 @@
 {% extends 'partials/_base.html' %}
-<!--{% load static %}-->
+
 {% block content %}
-    
+<div class="container">
+
+    {% for i in prods %}
+        <div class="card">
+            
+            <div class="img">
+                <img src="" alt="">
+            </div>
+            
+            <div class="dados">
+                <h2>{{ i.nome_produto }}</h2>
+                <span>preco</span>
+            </div>
+        </div>
+
+    {% endfor %}
+</div>
 {% endblock %}

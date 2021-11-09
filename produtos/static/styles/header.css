@@ -1,0 +1,60 @@
+header.cabecalho{
+    background-color: grey;
+    
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding: 2rem 6rem;
+    margin-bottom: 5rem;
+
+    font-size: 1.5rem;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1;
+
+}
+
+header.cabecalho .pesquisa{
+    background-color: white;
+    
+    display: flex;
+    align-items: center;
+    
+    height: 4rem;
+    width: 40rem;
+    padding: 1rem;
+    border-radius: 10px;
+    
+    box-sizing: border-box;
+}
+
+header.cabecalho .pesquisa .campo-pesquisa i{
+    background-color: #F44336;
+    color: red;
+}
+
+header.cabecalho .pesquisa .separador{
+    margin: 0 .5rem;
+}
+
+header.cabecalho .pesquisa .campo-pesquisa{
+    outline: transparent;
+    border: none;
+    
+    margin: 0;
+
+    height: 100%;
+    width: 100%;
+    
+    font-size: 1.5rem;
+}
+
+header.cabecalho .menu #icone-menu{
+    display: flex;
+    justify-content: right;
+}
