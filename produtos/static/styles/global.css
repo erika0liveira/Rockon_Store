@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    /* --background: #cfcfcf; */
+    --background: #F6FAFF;
+    --background-modal: #040911cc;
+    --black: #0d114f;
+    --blue: #3485FF;
+    --grey-blue: #A1B2CD;
+    --grey-dark: #4D5E77;
+    --grey-light: #E5EAF1; 
+    --grey-medium: #EAECF1;
+    --icon-details: #A5B0C1;
+    --light-blue: #E0ECFF;
+    --overlay: #040911;
+    --red: #E83F5B;
+    --white: #FAFAFA;
+
+    /* Transforma o padrão de pixels do navegador para 10px. Antes eram 16px*/
+    font-size: 62.5%;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

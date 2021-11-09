@@ -1,9 +1,13 @@
-from django.shortcuts import get_object_or_404, get_list_or_404, render
+from django.shortcuts import render
+
+from .models import Produto
 
 def index(request):
-    return render(request, 'index.html')
+    obj = Produto.objects.all()
+    context = {'prods': obj}
+    return render(request, "index.html", context)
 
 
 def item(request):
-    item = get_object_or_404(item, pk=produto_id)
     return render(request, 'item.html')
+
