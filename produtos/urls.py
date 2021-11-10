@@ -1,10 +1,10 @@
 from django.urls import path
-from . import views
-from .views import index, item
+from .views import index, item, Teste
 
 urlpatterns = [
     path('', index, name='index'),
-    path('index.html', index, name='index'),
-    path('item.html', item, name='item'),
-    # path('', teste_produto, name='index'),
+    path('index', index, name='index'),
+    path('<int:pk>/item', item, name='item'),
+    # path('<int:pk>/item', Teste.as_view(), name='item'),
 ]
+

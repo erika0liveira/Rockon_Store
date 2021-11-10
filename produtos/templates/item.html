@@ -1,14 +1,29 @@
 {% extends 'partials/_base.html' %}
+
 <!--{% load static %}-->
 {% block content %}
 
-<h1>ITEM</h1>
+    <div class="item-container">
+        <div class="img">
+            <img src="../../fotos/09/11/2021/img_teste.webp" alt="Foto do produto">
+        </div>
 
-<span>Aqui vai ser a página do item escolhido para visualização</span>
+        <div class="separador"></div>
 
-<hr>
 
-<span>Para voltar para o index </span>
-<a href="index.html">clique aqui</a>
+        <div class="infos">
+            <h1 id="nome-produto">{{ teste.nome_produto }}</h1>
+            <h2 id="preco">R$ {{ teste.preco }}</h2>
+            <p class="descricao">{{ teste.descricao }}</p>
 
+            <button id="adicionar-carrinho">
+                <i class="material-icons small">add_shopping_cart</i>Adicionar ao carrinho 
+            </button>
+
+            <button id="comprar">
+                <i class="material-icons small">check_circle</i> Comprar
+            </button>
+
+        </div>
+    </div>
 {% endblock %}

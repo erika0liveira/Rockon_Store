@@ -1,5 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
 header.cabecalho{
-    background-color: grey;
+    background-color: rgb(10, 17, 48);
     
     width: 100%;
 
@@ -7,7 +15,6 @@ header.cabecalho{
     grid-template-columns: 1fr 1fr 1fr;
 
     padding: 2rem 6rem;
-    margin-bottom: 5rem;
 
     font-size: 1.5rem;
     align-items: center;
@@ -16,6 +23,12 @@ header.cabecalho{
     top: 0;
 
     z-index: 1;
+
+}
+
+header.cabecalho .logo{
+    height: 4.5rem;
+    width: 10rem;
 
 }
 
@@ -33,17 +46,17 @@ header.cabecalho .pesquisa{
     box-sizing: border-box;
 }
 
-header.cabecalho .pesquisa .campo-pesquisa i{
-    background-color: #F44336;
-    color: red;
-}
-
 header.cabecalho .pesquisa .separador{
     margin: 0 .5rem;
+
+    height: 100%;
+    
+    width: .2rem;
+    background-color: grey;
 }
 
-header.cabecalho .pesquisa .campo-pesquisa{
-    outline: transparent;
+header.cabecalho .pesquisa #campo-pesquisa{
+    outline: none;
     border: none;
     
     margin: 0;
@@ -57,4 +70,13 @@ header.cabecalho .pesquisa .campo-pesquisa{
 header.cabecalho .menu #icone-menu{
     display: flex;
     justify-content: right;
+}
+
+header.cabecalho .menu #icone-menu i{
+    color: white;
+}
+
+header.cabecalho h1{
+    margin: 0;
+    box-sizing: border-box;
 }

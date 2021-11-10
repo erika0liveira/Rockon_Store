@@ -22,8 +22,11 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{% static 'styles/global.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/footer.css' %}">
     <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/item.css' %}">
+
+    
 
     
 </head>
@@ -31,12 +34,14 @@
 <body>
 
     {% include 'partials/header.html' %}
+    {% include 'partials/waves.html' %}
     
+
     {% block content %}
     {% endblock %}
 
-    <footer>
-        <h1>Footer</h1>
-    </footer>
 
+    <!-- <footer>
+        <h1>Footer</h1>
+    </footer> -->
 </body>

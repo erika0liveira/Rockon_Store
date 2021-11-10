@@ -25,6 +25,10 @@ html{
     /* Transforma o padrão de pixels do navegador para 10px. Antes eram 16px*/
     font-size: 62.5%;
 }
+  
+body{
+    height: 100vh;
+}
 
 .sr-only{
     position: absolute;

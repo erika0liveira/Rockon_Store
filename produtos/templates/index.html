@@ -4,17 +4,19 @@
 <div class="container">
 
     {% for i in prods %}
+    <a href="{% url 'item' i.id %}">
         <div class="card">
             
             <div class="img">
                 <img src="" alt="">
             </div>
-            
+            <div class="separador"></div>
             <div class="dados">
                 <h2>{{ i.nome_produto }}</h2>
-                <span>preco</span>
+                <span>R$ {{ i.preco }}</span>
             </div>
         </div>
+    </a>
 
     {% endfor %}
 </div>
