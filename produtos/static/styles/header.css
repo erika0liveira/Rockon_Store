@@ -50,8 +50,13 @@ header.cabecalho .pesquisa .separador{
     margin: 0 .5rem;
 
     height: 100%;
+<<<<<<< HEAD
     
     width: .2rem;
+=======
+    width: .2rem;
+
+>>>>>>> 3a285e5b894f3084699e60ed9ac6ce20147247c2
     background-color: grey;
 }
 

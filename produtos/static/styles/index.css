@@ -12,7 +12,11 @@ a *{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items:  center;
     
+<<<<<<< HEAD
     background-color: #00000050;
+=======
+    background-color: #a6c5ff67;
+>>>>>>> 3a285e5b894f3084699e60ed9ac6ce20147247c2
     backdrop-filter: blur(.3rem);
     
     border-radius: 1rem;
@@ -20,11 +24,16 @@ a *{
 }
 
 .container .card{
+<<<<<<< HEAD
     height: 30rem;
+=======
+    height: 25rem;
+>>>>>>> 3a285e5b894f3084699e60ed9ac6ce20147247c2
     width: 22rem;
 
     border-radius: 1rem;
     margin-bottom: 5rem;
+<<<<<<< HEAD
     padding: 2rem;
 
     background-color: rgba(202, 202, 202, 0.966);
@@ -46,9 +55,16 @@ a *{
     background-color: black;
     height: .1rem;
     margin: 1rem 0 1rem 0;
+=======
+
+    padding: 2rem;
+>>>>>>> 3a285e5b894f3084699e60ed9ac6ce20147247c2
 }
 
 .container .card h2{
     font-size: 2.5rem;
+<<<<<<< HEAD
     margin: 0;
+=======
+>>>>>>> 3a285e5b894f3084699e60ed9ac6ce20147247c2
 }
