@@ -14,6 +14,8 @@
                 <h2>{{ i.nome_produto }}</h2>
                 <span>preco</span>
             </div>
+
+            <a href="{% url 'item' i.id %}">teste</a>
         </div>
 
     {% endfor %}

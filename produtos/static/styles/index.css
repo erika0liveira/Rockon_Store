@@ -1,15 +1,30 @@
 .container{
     width: 100%;
     padding: 5rem;
+    margin-top: 6rem;
+    box-sizing: border-box;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items:  center;
-
-    background-color: rgb(180, 180, 180);
+    
+    background-color: #a6c5ff67;
+    backdrop-filter: blur(.3rem);
+    
+    border-radius: 1rem;
+    z-index: -2;
 }
 
 .container .card{
-    height: 22rem;
+    height: 25rem;
     width: 22rem;
+
+    border-radius: 1rem;
+    margin-bottom: 5rem;
+
+    padding: 2rem;
+}
+
+.container .card h2{
+    font-size: 2.5rem;
 }
