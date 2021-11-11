@@ -9,28 +9,17 @@
     grid-template-columns: 1fr 8.1rem 1fr;
     justify-items:  center;
 
-<<<<<<< HEAD
     background-color: #00000050;
-=======
-    background-color: #a6c5ff67;
->>>>>>> 3a285e5b894f3084699e60ed9ac6ce20147247c2
     backdrop-filter: blur(.3rem);
 
     border-radius: 1rem;
 }
 
-<<<<<<< HEAD
 .item-container .img{
     height: 60rem;
     width: 60rem;
     /* background-color: blue; */
     border: dotted 1px black;
-=======
-.item-container .imagem{
-    height: 60rem;
-    width: 60rem;
-    background-color: blue;
->>>>>>> 3a285e5b894f3084699e60ed9ac6ce20147247c2
     margin: 2rem 2rem 2rem 2rem;
 }
 
@@ -66,7 +55,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
 }
 
 .item-container .infos #adicionar-carrinho{
@@ -87,15 +75,3 @@
     cursor: pointer;
 }
 
-=======
-
-}
-
-.item-container .infos #adicionar-carrinho{
-    background-color: rgb(99, 187, 238);
-}
-
-.item-container .infos #comprar{
-    background-color: rgb(0, 197, 122);
-}
->>>>>>> 3a285e5b894f3084699e60ed9ac6ce20147247c2
