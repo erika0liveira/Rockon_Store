@@ -1,23 +1,30 @@
 {% extends 'partials/_base.html' %}
 
+{% load static %}
+
 {% block content %}
+
 <div class="container">
-
     {% for i in prods %}
-    <a href="{% url 'item' i.id %}">
-        <div class="card">
-            
-            <div class="img">
-                <img src="" alt="">
+        {% if i.disponivel == 1 %}
+        <a href="{% url 'item' i.id %}">
+            <div class="card">
+                <div class="img">
+                    {% if i.foto_produto == "" %}
+                        <img src="{% static 'img/sem-foto.png' %}" alt="foto">
+                    {% else %}
+                        <img src="{{ i.foto_produto.url }}" alt="">
+                    {% endif %}
+                </div>
+                <div class="separador"></div>
+                <div class="dados">
+                    <h2>{{ i.nome_produto }}</h2>
+                    <p>R$ {{ i.preco }}</p>
+                </div>
             </div>
-            <div class="separador"></div>
-            <div class="dados">
-                <h2>{{ i.nome_produto }}</h2>
-                <span>R$ {{ i.preco }}</span>
-            </div>
-        </div>
-    </a>
-
+        </a>
+        {% endif %}
     {% endfor %}
 </div>
+
 {% endblock %}

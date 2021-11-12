@@ -12,7 +12,7 @@ def index(request):
 
 
 def item(request, pk):
-    teste = {'teste': Produto.objects.get(id=pk)}
+    teste = {'item': Produto.objects.get(id=pk)}
     return render(request, 'item.html', teste)
 
 class Teste(generic.DetailView):
