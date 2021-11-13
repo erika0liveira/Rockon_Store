@@ -18,7 +18,6 @@
 
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="{% static 'styles/materialize/materialize.min.css' %}">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{% static 'styles/global.css' %}">
@@ -39,8 +38,6 @@
     {% block content %}
     {% endblock %}
 
+    {% include 'partials/_footer.html' %}
 
-    <!-- <footer>
-        <h1>Footer</h1>
-    </footer> -->
 </body>

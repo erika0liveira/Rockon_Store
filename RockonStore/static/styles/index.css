@@ -1,6 +1,7 @@
 .container{
-    width: 100%;
+    width: 80%;
     padding: 5rem;
+    margin: auto;
     margin-top: 6rem;
     box-sizing: border-box;
 
@@ -15,8 +16,12 @@
     z-index: -2;
 }
 
+.container a{
+    color: #000000;
+}
+
 .container .card{
-    height: 30rem;
+    height: 35rem;
     width: 22rem;
 
     border-radius: 1rem;
@@ -28,6 +33,7 @@
 
 .container .card:hover{
     box-shadow: -.5rem .5rem 1rem .2rem rgb(37, 37, 37);
+    transition-duration: .3s;
 }
 
 .container .card .img{
@@ -48,7 +54,11 @@
     margin: 1rem 0 1rem 0;
 }
 
-.container .card h2{
-    font-size: 2.5rem;
+.container .card .dados h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+    
     margin: 0;
 }

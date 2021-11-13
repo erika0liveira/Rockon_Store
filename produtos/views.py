@@ -6,18 +6,10 @@ from django.views import generic
 from .models import Produto
 
 def index(request):
-    obj = Produto.objects.all()
-    context = {'prods': obj}
+    context = {'prods': Produto.objects.all()}
     return render(request, "index.html", context)
 
 
 def item(request, pk):
-    teste = {'item': Produto.objects.get(id=pk)}
-    return render(request, 'item.html', teste)
-
-class Teste(generic.DetailView):
-    model = Produto
-    template_name = 'item.html'
-    def get_queryset(self):
-        return Produto.objects.all()
-    
+    context = {'item': Produto.objects.get(id=pk)}
+    return render(request, 'item.html', context)

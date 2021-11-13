@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -27,7 +29,10 @@ html{
 }
   
 body{
-    height: 100vh;
+    position: relative;
+    height: 100%;
+    min-height: 100vh;
+    padding-bottom: 14.5rem;
 }
   
 .sr-only{
@@ -41,5 +46,19 @@ body{
     white-space: nowrap;
     border-width: 0;
 }
+
+i.tiny {
+    font-size: 1rem;
+}
+
+i.small {
+    font-size: 2rem;
+}
   
+i.medium {
+    font-size: 3rem;
+}
   
+i.large {
+    font-size: 6rem;
+}
