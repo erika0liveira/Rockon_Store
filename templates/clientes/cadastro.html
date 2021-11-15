@@ -1,0 +1,81 @@
+{% extends 'partials/_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Início da área de formulário para cadastro -->
+
+<div class="contact-area section-padding-0-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading">
+                    <h2>Criar conta</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="contact-form-area">
+                    <form action="{% url 'cadastro' %}" method="POST">
+                        {% csrf_token %} <!-- Próprio do Django para segurança contra ataques CSRF-->
+                        <div class="row">
+                            <div class="col-12 col-lg-12">
+                                <label for="nome"><b>Primeiro Nome</b></label>
+                                <input type="text" class="form-control" name="nome" placeholder="Ex.: Walber"
+                                    required>
+                            </div>
+                            <div class="col-12 col-lg-12">
+                                <label for="sobrenome"><b>Sobrenome</b></label>
+                                <input type="text" class="form-control" name="sobrenome" placeholder="Ex.: Tavares"
+                                    required>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <label for="cpf"><b>CPF</b></label>
+                                <input type="cpf" class="form-control" name="cpf"
+                                    placeholder="Digite seu CPF Ex.: 123.456.789-10" required>
+                            </div>
+                            <div class="col-12 col-lg-12">
+                                <label for="endereco"><b>Endereço</b></label>
+                                <input type="address" class="form-control" name="endereco"
+                                    placeholder="Ex.: Rua ABC" required>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <label for="numero"><b>Número</b></label>
+                                <input type="number" class="form-control" name="numero"
+                                    placeholder="Digite o número da sua casa" required>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <label for="cep"><b>CEP</b></label>
+                                <input type="cep" class="form-control" name="cep"
+                                    placeholder="Digite seu CEP Ex.: 12345-678" required>
+                            </div>
+                            <div class="col-12 col-lg-12">
+                                <label for="email"><b>Email</b></label>
+                                <input type="email" class="form-control" name="email"
+                                    placeholder="Ex.: wt@metal.com" required>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <label for="password"><b>Senha</b></label>
+                                <input type="password" class="form-control" name="password"
+                                    placeholder="Digite sua senha Ex.: Rataria123" required>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <label for="password2"><b>Confirmação de senha</b></label>
+                                <input type="password" class="form-control" name="password2"
+                                    placeholder="Digite sua senha mais uma vez" required>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button class="btn btn-success" type="submit">Criar sua conta</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fim da área de formulário para cadastro -->
+
+{% endblock %}

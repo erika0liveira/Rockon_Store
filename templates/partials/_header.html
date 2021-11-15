@@ -1,0 +1,57 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/header.css' %}">
+
+<header class="cabecalho">
+    <a href="{% url 'index' %}" class="logo">
+        <img src="{% static 'img/logo.png' %}" alt="Logo">
+    </a>
+
+    <div class="pesquisa">
+        <i class="material-icons small white ">search</i>
+        <span class="separador"></span>
+        <input type="text" id="campo-pesquisa" placeholder="Pesquisar"></input>
+    </div>
+
+    
+    <div class="menu">
+        <div id="icone-menu">
+
+            <a href="{% url 'login' %}">
+                <i class="material-icons medium">menu</i>
+            </a>
+
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="{% url 'login' %}">
+                        <i class="material-icons medium">mood</i>
+                        {% if user.is_authenticated %}
+                            <ul id="dropdown1" class="dropdown-content">
+                                <li><a href="{% url 'logout' %}">Logout</a></li>
+                            </ul>
+                        {% else %}
+                        <ul id="dropdown1" class="dropdown-content">
+                            <li><a href="{% url 'login' %}">Login</a></li>
+                        </ul>
+                        {% endif %}
+                    </a>
+                </div>
+            </nav>
+
+            <a href="{% url 'carrinho' %}">
+                <i class="material-icons medium">shopping_cart</i>
+            </a>
+        </div>
+
+            <!-- MANTER O MENU AQUI ? -->
+            <!-- <nav class="sr-only">
+            <ul type="none">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </nav> -->
+        </div>
+</header>
+
+
+

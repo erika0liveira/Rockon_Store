@@ -1,0 +1,49 @@
+html{
+	height: 100%;
+}
+
+body{
+  background-image: url('teste.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: fixed;
+	text-align:left;
+	font-family: Verdana, Tahoma, Arial;
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+*{
+	list-style:none;
+  padding:0px;
+	margin:0px;
+}
+
+#all{
+	height:100%;
+	width:100%;
+	margin:auto;
+}
+
+.nav-tabs .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.tab-content{
+  padding: 10px;
+}
+
+.x{
+  top: 10em;
+}
+
+.card{
+  background-color: rgba(4, 4, 26, 0.582);
+  color: white;
+}
+
+.text-muted{
+  color:rgb(212, 202, 202)!important;
+}

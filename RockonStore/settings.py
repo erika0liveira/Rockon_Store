@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['20.197.249.117', '127.0.0.1', '127.0.0.2']
 INSTALLED_APPS = [
     # My Apps
     'produtos',
+    'clientes',   
     
     # Default
     'django.contrib.admin',
@@ -59,7 +60,7 @@ ROOT_URLCONF = 'RockonStore.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'produtos/templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -139,3 +140,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Media, imagens, fotos
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
