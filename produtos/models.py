@@ -10,3 +10,7 @@ class Produto(models.Model):
     slug = AutoSlugField(unique=True, always_update=False, populate_from="nome_produto")
     foto_produto = models.ImageField(upload_to='fotos/%d/%m/%Y', blank=True)
     disponivel = models.BooleanField(default=True)
+
+
+def __str__(self):
+        return self.nome_produto
