@@ -6,7 +6,7 @@ from django.views import generic
 from .models import Produto
 
 def index(request):
-    context = {'prods': Produto.objects.all()}
+    context = {'produtos': Produto.objects.all()}
     return render(request, "index.html", context)
 
 

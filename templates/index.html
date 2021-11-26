@@ -5,24 +5,24 @@
 {% block content %}
 
 <div class="container">
-    {% for i in prods %}
-        {% if i.disponivel == 1 %}
-        <a href="{% url 'item' i.id %}">
+    {% for produto in produtos %}
+        {% if produto.disponivel == 1 %}
+        <a href="{% url 'item' produto.id %}">
             <div class="card">
 
                 <div class="img">
-                    {% if i.foto_produto == "" %}
+                    {% if produto.foto_produto == "" %}
                         <img src="{% static 'img/sem-foto.png' %}" alt="foto">
                     {% else %}
-                        <img src="{{ i.foto_produto.url }}" alt="">
+                        <img src="{{ produto.foto_produto.url }}" alt="">
                     {% endif %}
                 </div>
 
                 <div class="separador"></div>
 
                 <div class="dados">
-                    <h2>{{ i.nome_produto }}</h2>
-                    <p>R$ {{ i.preco }}</p>
+                    <h2>{{ produto.nome_produto }}</h2>
+                    <p>R$ {{ produto.preco }}</p>
                 </div>
 
             </div>

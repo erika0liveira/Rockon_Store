@@ -6,4 +6,3 @@ urlpatterns = [
     path('index', index, name='index'),
     path('<int:pk>/item', item, name='item'),
 ]
-

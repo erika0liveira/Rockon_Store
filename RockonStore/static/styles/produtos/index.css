@@ -18,6 +18,7 @@
 
 .container a{
     color: #000000;
+    margin-bottom: 5rem;
 }
 
 .container .card{
@@ -25,7 +26,6 @@
     width: 22rem;
 
     border-radius: 1rem;
-    margin-bottom: 5rem;
     padding: 2rem;
 
     background-color: rgba(202, 202, 202, 0.966);
