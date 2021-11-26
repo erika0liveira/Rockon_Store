@@ -7,12 +7,14 @@
     </a>
 
     <div class="pesquisa">
-        <i class="material-icons small white ">search</i>
-        <span class="separador"></span>
-        <input type="text" id="campo-pesquisa" placeholder="Pesquisar"></input>
+        <form action="{% url 'buscar' %}">
+            <i class="material-icons small white ">search</i>
+            <span class="separador"></span>
+            <input type="text" id="campo-pesquisa" placeholder="Pesquisar"></input>
+        </form>
     </div>
 
-    
+
     <div class="menu">
         <div id="icone-menu">
 
@@ -25,9 +27,9 @@
                     <a href="{% url 'login' %}">
                         <i class="material-icons medium">mood</i>
                         {% if user.is_authenticated %}
-                            <ul id="dropdown1" class="dropdown-content">
-                                <li><a href="{% url 'logout' %}">Logout</a></li>
-                            </ul>
+                        <ul id="dropdown1" class="dropdown-content">
+                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                        </ul>
                         {% else %}
                         <ul id="dropdown1" class="dropdown-content">
                             <li><a href="{% url 'login' %}">Login</a></li>
@@ -42,16 +44,13 @@
             </a>
         </div>
 
-            <!-- MANTER O MENU AQUI ? -->
-            <!-- <nav class="sr-only">
+        <!-- MANTER O MENU AQUI ? -->
+        <!-- <nav class="sr-only">
             <ul type="none">
                 <li>1</li>
                 <li>2</li>
                 <li>3</li>
             </ul>
         </nav> -->
-        </div>
+    </div>
 </header>
-
-
-
