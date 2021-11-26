@@ -26,7 +26,7 @@ SECRET_KEY = get_secret('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['20.197.249.117', '127.0.0.1', '127.0.0.2']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'rockon_store',
         'USER': 'dedsec',
         'PASSWORD': get_secret('DB_PASSWORD'),
-        'HOST': '20.197.249.117',
+        'HOST': '20.124.210.118',
     }
 }
 
