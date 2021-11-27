@@ -82,6 +82,16 @@ header.cabecalho .menu>*{
     margin-left: 1rem;
 }
 
+header.cabecalho .menu a#cadastro{
+    text-decoration: none;
+    background-color: var(--azul);
+    color: var(--preto);
+}
+
+header.cabecalho .menu a#cadastro:hover{
+    background-color: var(--azul-claro);
+}
+
 header.cabecalho .menu a#login{
     text-decoration: none;
     background-color: var(--verde);
@@ -110,4 +120,3 @@ header.cabecalho h1{
     margin: 0;
     box-sizing: border-box;
 }
-

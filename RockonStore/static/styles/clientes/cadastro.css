@@ -1,3 +1,11 @@
+.cadastro-container{
+    justify-items: left;
+}
+
+.cadastro-container h1{
+    margin-left: 2.5rem;
+}
+
 .cadastro-container form{
     width: 100%;
     display: flex;

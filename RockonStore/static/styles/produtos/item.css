@@ -42,7 +42,6 @@
 
 .item-container .infos #adicionar-carrinho:hover{
     background-color: var(--azul-claro);
-    cursor: pointer;
 }
 
 .item-container .infos #comprar{
@@ -51,6 +50,5 @@
 
 .item-container .infos #comprar:hover{
     background-color: var(--verde-claro);
-    cursor: pointer;
 }
 
