@@ -8,25 +8,22 @@
     box-sizing: border-box;
 
     font-family: "Poppins", sans-serif;
-    color: #000000;
+    color: var(--preto);
     margin: 0;
 }
 
 html{
-    /* --background: #cfcfcf; */
-    --background: #F6FAFF;
-    --background-modal: #040911cc;
-    --black: #0d114f;
-    --blue: #3485FF;
-    --grey-blue: #A1B2CD;
-    --grey-dark: #4D5E77;
-    --grey-light: #E5EAF1; 
-    --grey-medium: #EAECF1;
-    --icon-details: #A5B0C1;
-    --light-blue: #E0ECFF;
-    --overlay: #040911;
-    --red: #E83F5B;
-    --white: #FAFAFA;
+    --azul: #0889D5;
+    --azul-claro: #63BBEE;
+    --azul-escuro: #0A1130;
+    --branco: #FFFFFF;
+    --cinza: #808080;
+    --cinza-claro: #CACACA;
+    --cinza-escuro: #252525;
+    --preto: #000000;
+    --preto-transparente: #00000050;
+    --verde: #00A365;
+    --verde-claro: #63EE81;
 
     /* Transforma o padrão de pixels do navegador para 10px. Antes eram 16px*/
     font-size: 62.5%;
@@ -60,7 +57,7 @@ body{
     display: grid;
     justify-items:  center;
 
-    background-color: #00000050;
+    background-color: var(--preto-transparente);
     backdrop-filter: blur(.3rem);
     border-radius: 1rem;
 }

@@ -18,11 +18,11 @@
 }
 
 .login-container form button{
-    background-color: rgb(0, 163, 101);
+    background-color: var(--verde);
 }
 
 .login-container form button:hover{
-    background-color: rgb(99, 238, 129);
+    background-color: var(--verde-claro);
     cursor: pointer;
 }
 

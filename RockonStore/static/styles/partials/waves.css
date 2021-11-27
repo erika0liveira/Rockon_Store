@@ -3,7 +3,7 @@
     position:fixed;
     text-align:center;
     background: linear-gradient(60deg, rgb(99, 196, 209) 0%,rgb(86, 54, 216) 100%);
-    color:white;
+    color:var(--branco);
     height: 100%;
     z-index: -3;
 }
