@@ -18,31 +18,31 @@
 
 
     <div class="menu">
-        <div id="icone-menu">
-
-            
-            {% if user.is_authenticated %}
-            <ul id="dropdown1" class="dropdown-content">
-                <li><a href="{% url 'logout' %}">Logout</a></li>
-            </ul>
-            {% else %}
-            <ul id="dropdown1" class="dropdown-content">
-                <li><a href="{% url 'login' %}">Login</a></li>
-            </ul>
-            {% endif %}
-            
-            <a href="{% url 'carrinho' %}">
-                <i class="material-icons medium">shopping_cart</i>
+        
+        
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}" class="button pequeno" id="logout">
+                Logout<i class="material-icons small">exit_to_app</i>
             </a>
+        {% else %}
+            <a href="{% url 'login' %}" class="button pequeno" id="login">
+                <i class="material-icons small">person</i>Login
+            </a>
+        {% endif %}
+        
+        <a href="{% url 'carrinho' %}">
+            <i class="material-icons medium">shopping_cart</i>
+        </a>
+        
+        <!-- <nav>
+            <div class="nav-wrapper">
+                <a href="{% url 'login' %}">
+                    <i class="material-icons medium">mood</i>
+                </a>
+            </div>
+        </nav> -->
             
-            <!-- <nav>
-                <div class="nav-wrapper">
-                    <a href="{% url 'login' %}">
-                        <i class="material-icons medium">mood</i>
-                    </a>
-                </div>
-            </nav> -->
-            
+        <div id="icone-menu">
             <a href="#">
                 <i class="material-icons medium">menu</i>
             </a>

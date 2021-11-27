@@ -73,9 +73,33 @@ header.cabecalho .pesquisa form button{
     height: 100%;
 }
 
-header.cabecalho .menu #icone-menu{
+header.cabecalho .menu{
     display: flex;
     justify-content: right;
+}
+
+header.cabecalho .menu>*{
+    margin-left: 1rem;
+}
+
+header.cabecalho .menu a#login{
+    text-decoration: none;
+    background-color: var(--verde);
+    color: var(--preto);
+}
+
+header.cabecalho .menu a#login:hover{
+    background-color: var(--verde-claro);
+}
+
+header.cabecalho .menu a#logout{
+    text-decoration: none;
+    background-color: var(--vermelho);
+    color: var(--preto);
+}
+
+header.cabecalho .menu a#logout:hover{
+    background-color: var(--vermelho-claro);
 }
 
 header.cabecalho .menu #icone-menu i{

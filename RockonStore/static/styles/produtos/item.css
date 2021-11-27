@@ -1,5 +1,5 @@
 .item-container{
-    grid-template-columns: 1fr 8.1rem 1fr;
+    grid-template-columns: 1fr 7.1rem 1fr;
     border-radius: 1rem;
 }
 
@@ -34,10 +34,6 @@
 
 .item-container .infos .descricao{
     margin: 2rem 0;
-}
-
-.item-container .infos button{
-    width: 100%;
 }
 
 .item-container .infos #adicionar-carrinho{

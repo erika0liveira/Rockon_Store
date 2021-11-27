@@ -3,9 +3,17 @@
     flex-direction: column;
 }
 
+h1{
+    color: var(--branco);
+}
+
 .login-container form{
     display: flex;
     flex-direction: column;
+}
+
+.login-container form label{
+    color: var(--branco);
 }
 
 /* Ajustar no JS para habilitar e desabilitar o botão */

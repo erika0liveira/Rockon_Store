@@ -21,9 +21,11 @@ html{
     --cinza-claro: #CACACA;
     --cinza-escuro: #252525;
     --preto: #000000;
-    --preto-transparente: #00000050;
+    --preto-transparente: #00000080;
     --verde: #00A365;
     --verde-claro: #63EE81;
+    --vermelho: #9e0000;
+    --vermelho-claro: #EE4848;
 
     /* Transforma o padrão de pixels do navegador para 10px. Antes eram 16px*/
     font-size: 62.5%;
@@ -66,6 +68,10 @@ body{
     width: 80%;
 }
 
+.container-medio{
+    width: 60%;
+}
+
 .container-pequeno{
     width: 30%;
 }
@@ -85,7 +91,9 @@ h2{
 
 p,
 label,
-input{
+input,
+button,
+.button{
     font-size: 1.5rem;
 }
 
@@ -110,26 +118,41 @@ button:focus,
     border-radius: .5rem;
 
     outline: none;
-
+    
     display: flex;
     align-items: center;
     justify-content: center;    
 }
 
+button.grande,
+.button.grande{
+    width: 32.5rem;    
+}
+
+button.medio,
+.button.medio{
+    width: 21.25rem;
+}
+
+button.pequeno,
+.button.pequeno{
+    width: 10rem;    
+}
+
 /* Tamanho de icones Materialize */
-i.tiny {
-    font-size: 1rem;
+i.large {
+    font-size: 6rem;
+}
+
+i.medium {
+    font-size: 3rem;
 }
 
 i.small {
     font-size: 2rem;
 }
-  
-i.medium {
-    font-size: 3rem;
-}
-  
-i.large {
-    font-size: 6rem;
+
+i.tiny {
+    font-size: 1rem;
 }
 /* Tamanho de icones Materialize - FIM */
