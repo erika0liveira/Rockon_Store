@@ -1,11 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    border: none;
-    text-decoration: none;
-    box-sizing: border-box;
-}
-
 header.cabecalho{
     background-color: rgb(10, 17, 48);
     
@@ -69,8 +61,6 @@ header.cabecalho .pesquisa form #campo-pesquisa{
     box-shadow: 0 0 0 30px #FFFFFF inset;
     outline: none;
     border: none;
-    
-    margin: 0;
 
     height: 100%;
     width: 100%;
@@ -80,6 +70,7 @@ header.cabecalho .pesquisa form #campo-pesquisa{
 
 header.cabecalho .pesquisa form button{
     background-color: #FFFFFF;
+    height: 100%;
 }
 
 header.cabecalho .menu #icone-menu{

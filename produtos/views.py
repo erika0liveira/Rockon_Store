@@ -21,7 +21,7 @@ def busca(request):
             print(termo)
             # Realizando a busca no banco de dados
             busca_produtos = Produto.objects.order_by('-preco').filter(
-                nome_produto__contains = termo,
+                nome_produto__icontains = termo,
                 disponivel = True,
             )
 

@@ -6,6 +6,10 @@
     border: none;
     text-decoration: none;
     box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+    margin: 0;
 }
 
 html{
@@ -47,6 +51,75 @@ body{
     border-width: 0;
 }
 
+.container{
+    padding: 5rem;
+    margin: auto;
+    margin-top: 6rem;
+    box-sizing: border-box;
+    
+    display: grid;
+    justify-items:  center;
+
+    background-color: #00000050;
+    backdrop-filter: blur(.3rem);
+    border-radius: 1rem;
+}
+
+.container-grande{
+    width: 80%;
+}
+
+.container-pequeno{
+    width: 30%;
+}
+
+h1{
+    font-weight: 700;
+    line-height: 4.2rem;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+h2{
+    font-weight: 700;
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+}
+
+p,
+label,
+input{
+    font-size: 1.5rem;
+}
+
+input{
+    height: 5rem;
+
+    margin-bottom: 3rem;
+    border-radius: .5rem;
+
+    outline: none;
+
+    padding: 1rem;
+}
+
+button,
+.button,
+button:focus,
+.button:focus{
+    height: 5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem !important;
+    border-radius: .5rem;
+
+    outline: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+/* Tamanho de icones Materialize */
 i.tiny {
     font-size: 1rem;
 }
@@ -62,3 +135,4 @@ i.medium {
 i.large {
     font-size: 6rem;
 }
+/* Tamanho de icones Materialize - FIM */

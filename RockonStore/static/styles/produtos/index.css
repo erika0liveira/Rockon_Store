@@ -1,27 +1,15 @@
-.container{
-    width: 80%;
-    padding: 5rem;
-    margin: auto;
-    margin-top: 6rem;
-    box-sizing: border-box;
-
-    display: grid;
+.index-container{
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items:  center;
-    
-    background-color: #00000050;
-    backdrop-filter: blur(.3rem);
-    
-    border-radius: 1rem;
     z-index: -2;
 }
 
-.container a{
+.index-container a{
+    text-decoration: none;
     color: #000000;
     margin-bottom: 5rem;
 }
 
-.container .card{
+.index-container .card{
     height: 35rem;
     width: 22rem;
 
@@ -31,34 +19,25 @@
     background-color: rgba(202, 202, 202, 0.966);
 }
 
-.container .card:hover{
+.index-container .card:hover{
     box-shadow: -.5rem .5rem 1rem .2rem rgb(37, 37, 37);
     transition-duration: .3s;
 }
 
-.container .card .img{
+.index-container .card .img{
     height: 18rem;
     width: 18rem;
     display: flex;
     justify-content: center;
 }
 
-.container .card .img img{
+.index-container .card .img img{
     max-height: 18rem;
     max-width: 18rem;
 }
 
-.container .card .separador{
+.index-container .card .separador{
     background-color: black;
     height: .1rem;
     margin: 1rem 0 1rem 0;
-}
-
-.container .card .dados h2{
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    line-height: 2.5rem;
-    font-size: 1.8rem;
-    
-    margin: 0;
 }
