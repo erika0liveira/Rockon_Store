@@ -1,0 +1,36 @@
+{% extends 'partials/_base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    {% if produtos %}
+    {% for produto in produtos %}
+    {% if produto.disponivel == 1 %}
+        <a href="{% url 'item' produto.id %}">
+            <div class="card">
+
+                <div class="img">
+                    {% if produto.foto_produto == "" %}
+                        <img src="{% static 'img/sem-foto.png' %}" alt="foto">
+                    {% else %}
+                        <img src="{{ produto.foto_produto.url }}" alt="">
+                    {% endif %}
+                </div>
+
+                <div class="separador"></div>
+
+                <div class="dados">
+                    <h2>{{ produto.nome_produto }}</h2>
+                    <p>R$ {{ produto.preco }}</p>
+                </div>
+
+            </div>
+        </a>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+</div>
+
+{% endblock %}

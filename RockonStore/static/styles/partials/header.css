@@ -48,16 +48,25 @@ header.cabecalho .pesquisa{
     box-sizing: border-box;
 }
 
+
 header.cabecalho .pesquisa .separador{
     margin: 0 .5rem;
-
+    
     height: 100%;
     
     width: .2rem;
     background-color: grey;
 }
 
-header.cabecalho .pesquisa #campo-pesquisa{
+header.cabecalho .pesquisa form{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+}
+
+header.cabecalho .pesquisa form #campo-pesquisa{
+    box-shadow: 0 0 0 30px #FFFFFF inset;
     outline: none;
     border: none;
     
@@ -65,8 +74,12 @@ header.cabecalho .pesquisa #campo-pesquisa{
 
     height: 100%;
     width: 100%;
-    
+
     font-size: 1.5rem;
+}
+
+header.cabecalho .pesquisa form button{
+    background-color: #FFFFFF;
 }
 
 header.cabecalho .menu #icone-menu{

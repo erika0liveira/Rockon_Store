@@ -5,8 +5,9 @@
 {% block content %}
 
 <div class="container">
-    {% for produto in produtos %}
-        {% if produto.disponivel == 1 %}
+    {% if produtos_encontrados %}
+    {% for produto in produtos_encontrados %}
+    {% if produto.disponivel == 1 %}
         <a href="{% url 'item' produto.id %}">
             <div class="card">
 
@@ -27,8 +28,13 @@
 
             </div>
         </a>
-        {% endif %}
+    {% endif %}
     {% endfor %}
+    {% else %}
+        <div class="col-12 col-sm-6 col-lg-4">
+            <p>Produto Não Encontrado! :(</p>
+        </div>
+    {% endif %}
 </div>
 
 {% endblock %}
