@@ -124,18 +124,15 @@ button:focus,
     justify-content: center;    
 }
 
-button.grande,
-.button.grande{
+.grande{
     width: 32.5rem;    
 }
 
-button.medio,
-.button.medio{
+.medio{
     width: 21.25rem;
 }
 
-button.pequeno,
-.button.pequeno{
+.pequeno{
     width: 10rem;    
 }
 
