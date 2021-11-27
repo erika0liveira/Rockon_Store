@@ -3,9 +3,17 @@
     flex-direction: column;
 }
 
+h1{
+    color: var(--branco);
+}
+
 .login-container form{
     display: flex;
     flex-direction: column;
+}
+
+.login-container form label{
+    color: var(--branco);
 }
 
 /* Ajustar no JS para habilitar e desabilitar o botão */
@@ -18,11 +26,11 @@
 }
 
 .login-container form button{
-    background-color: rgb(0, 163, 101);
+    background-color: var(--verde);
 }
 
 .login-container form button:hover{
-    background-color: rgb(99, 238, 129);
+    background-color: var(--verde-claro);
     cursor: pointer;
 }
 

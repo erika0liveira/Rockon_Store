@@ -5,7 +5,7 @@
 
 .index-container a{
     text-decoration: none;
-    color: #000000;
+    color: var(--preto);
     margin-bottom: 5rem;
 }
 
@@ -16,11 +16,11 @@
     border-radius: 1rem;
     padding: 2rem;
 
-    background-color: rgba(202, 202, 202, 0.966);
+    background-color: var(--cinza-claro);
 }
 
 .index-container .card:hover{
-    box-shadow: -.5rem .5rem 1rem .2rem rgb(37, 37, 37);
+    box-shadow: -.5rem .5rem 1rem .2rem var(--cinza-escuro);
     transition-duration: .3s;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .index-container .card .separador{
-    background-color: black;
+    background-color: var(--preto);
     height: .1rem;
     margin: 1rem 0 1rem 0;
 }

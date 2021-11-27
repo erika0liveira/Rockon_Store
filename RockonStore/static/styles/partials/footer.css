@@ -1,5 +1,5 @@
 footer.rodape{
-    background-color: rgb(10, 17, 48);
+    background-color: var(--azul-escuro);
 
     height: 8.5rem;
     width: 100%;
@@ -18,5 +18,5 @@ footer.rodape .content{
     justify-content: center;
     align-items: center;
     
-    color: white;
+    color: var(--branco);
 }
