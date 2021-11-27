@@ -1,16 +1,17 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User, AbstractUser
 from django.contrib import auth
+from .models import Usuario
 
 def cadastro(request):
     # Teste para verificar se o método POST em cadastro.html está funcionando certo, se sim vai para a pág de login
     if request.method == 'POST':
         nome = request.POST['nome']
         sobrenome = request.POST['sobrenome']
-        # cpf == request.POST['cpf']
-        # endereco == request.POST['endereco']
-        # numero == request.POST['numero']
-        # cep == request.POST['cep']
+        Usuario.documento == request.POST['documento']
+        Usuario.endereco == request.POST['endereco']
+        Usuario.numero == request.POST['numero']
+        Usuario.cep == request.POST['cep']
         email = request.POST['email']
         senha = request.POST['password']
         senha2 = request.POST['password2']
@@ -23,10 +24,10 @@ def cadastro(request):
         if senha != senha2:
             print('As senhas não são iguais')
             return redirect('cadastro')
-        if User.objects.filter(email=email).exists():
+        if Usuario.objects.filter(email=email).exists():
             print('Usuário já cadastrado')
             return redirect('cadastro')
-        user = User.objects.create_user(username=nome, email=email, password=senha)
+        user = Usuario.objects.create_user(username=nome, email=email, password=senha)
         user.save()
         print('Usuário cadastrado com sucesso')
         return redirect('login')
@@ -45,8 +46,8 @@ def login(request):
 
         print(email, senha)
         
-        if User.objects.filter(email=email).exists():
-            nome = User.objects.filter(email=email).values_list('username', flat=True).get()
+        if Usuario.objects.filter(email=email).exists():
+            nome = Usuario.objects.filter(email=email).values_list('username', flat=True).get()
             user = auth.authenticate(request, username=nome, password=senha)
             if user is not None:
                 auth.login(request, user)
