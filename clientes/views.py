@@ -67,6 +67,6 @@ def perfil(request):
 
 def carrinho(request):
     if request.user.is_authenticated:
-        return render(request, 'clientes/carrinho.html')
+        return render(request, 'carrinho/carrinho.html')
     else:
         return redirect('index')

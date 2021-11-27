@@ -34,7 +34,8 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     # My Apps
     'produtos',
-    'clientes',   
+    'clientes',
+    'carrinho',
     
     # Default
     'django.contrib.admin',
