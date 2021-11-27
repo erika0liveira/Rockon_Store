@@ -3,27 +3,31 @@ from .models import Produto
 
 def index(request):
     context = {'produtos': Produto.objects.all()}
-    return render(request, "index.html", context)
+    return render(request, "produtos/index.html", context)
 
 
 def item(request, pk):
     context = {'item': Produto.objects.get(id=pk)}
-    return render(request, 'item.html', context)
+    return render(request, 'produtos/item.html', context)
 
 
-def buscar(request):
-    busca_produto = Produto.objects.order_by('-preco').filter(disponivel=True)
-    print(request.GET)
+def busca(request):
+    
+    # Verifica se o request trouxe o termo de busca
+    if 'termo' in request.GET:
+        termo = request.GET['termo']
+        # Verifica se o termo de busca tem algum valor para busca
+        if termo != '':
+            print(termo)
+            # Realizando a busca no banco de dados
+            busca_produtos = Produto.objects.order_by('-preco').filter(
+                nome_produto__contains = termo,
+                disponivel = True,
+            )
 
-    if 'buscar' in request.GET:
-        nome_buscar = request.GET['buscar']
-        if buscar:
-            busca_produto = busca_produto.filter(nome_produto__icontains=nome_buscar)
-            
-            
-   
-    dados = {
-        'produtos': busca_produto,
-    }
+            context = {'produtos_encontrados' : busca_produtos}
+            return render(request, 'produtos/busca.html', context)
 
-    return render(request, 'buscar.html', dados)
+        # Definir algo para quando não houver um termo
+        else:
+            pass

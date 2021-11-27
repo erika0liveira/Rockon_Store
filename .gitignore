@@ -2,9 +2,6 @@
 *.sw[po]
 
 /secrets.json
-<<<<<<< HEAD
 /*/__init__.py
 /anotacoes
-=======
-/*/__init__.py
->>>>>>> 3df65fada0dd804ed30aef990291f3dc3b2f0fd0
+.gitignore

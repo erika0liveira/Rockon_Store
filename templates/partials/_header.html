@@ -7,10 +7,12 @@
     </a>
 
     <div class="pesquisa">
-        <form action="{% url 'buscar' %}">
-            <i class="material-icons small white ">search</i>
+        <form action="{% url 'busca' %}" method="GET">
+            <input type="text" id="campo-pesquisa" placeholder="Pesquisar" name="termo" autocomplete="off"></input>
             <span class="separador"></span>
-            <input type="text" id="campo-pesquisa" placeholder="Pesquisar"></input>
+            <button type="submit">
+                <i class="material-icons small white">search</i>
+            </button>
         </form>
     </div>
 
