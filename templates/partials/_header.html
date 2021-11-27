@@ -20,29 +20,31 @@
     <div class="menu">
         <div id="icone-menu">
 
-            <a href="{% url 'login' %}">
-                <i class="material-icons medium">menu</i>
+            
+            {% if user.is_authenticated %}
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+            {% else %}
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="{% url 'login' %}">Login</a></li>
+            </ul>
+            {% endif %}
+            
+            <a href="{% url 'carrinho' %}">
+                <i class="material-icons medium">shopping_cart</i>
             </a>
-
-            <nav>
+            
+            <!-- <nav>
                 <div class="nav-wrapper">
                     <a href="{% url 'login' %}">
                         <i class="material-icons medium">mood</i>
-                        {% if user.is_authenticated %}
-                        <ul id="dropdown1" class="dropdown-content">
-                            <li><a href="{% url 'logout' %}">Logout</a></li>
-                        </ul>
-                        {% else %}
-                        <ul id="dropdown1" class="dropdown-content">
-                            <li><a href="{% url 'login' %}">Login</a></li>
-                        </ul>
-                        {% endif %}
                     </a>
                 </div>
-            </nav>
-
-            <a href="{% url 'carrinho' %}">
-                <i class="material-icons medium">shopping_cart</i>
+            </nav> -->
+            
+            <a href="#">
+                <i class="material-icons medium">menu</i>
             </a>
         </div>
 
