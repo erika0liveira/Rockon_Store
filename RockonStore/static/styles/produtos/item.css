@@ -23,7 +23,7 @@
     margin: 0 4rem 0 4rem;
 }
 
-.item-container .infos *{
+.item-container .infos *:not(h1){
     margin: 0;
 }
 
@@ -37,16 +37,7 @@
 }
 
 .item-container .infos button{
-    height: 5rem;
     width: 100%;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-
-    border-radius: .5rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .item-container .infos #adicionar-carrinho{
