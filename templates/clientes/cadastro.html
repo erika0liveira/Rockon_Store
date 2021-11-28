@@ -6,7 +6,8 @@
 <!-- Início da área de formulário para cadastro -->
 
 <div class="container container-medio cadastro-container">
-    <form action="#" method="POST">
+    <h1>Cadastro de Usuário</h1>
+    <form action="{% url 'cadastro' %}" method="POST">
         {% csrf_token %}
         <h2>Dados Pessoais</h2>
         <div class="info pessoal">

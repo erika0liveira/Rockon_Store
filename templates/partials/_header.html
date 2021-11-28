@@ -25,6 +25,9 @@
                 Logout<i class="material-icons small">exit_to_app</i>
             </a>
         {% else %}
+            <a href="{% url 'cadastro' %}" class="button pequeno" id="cadastro">
+                <i class="material-icons small">person_add</i>Cadastro
+            </a>
             <a href="{% url 'login' %}" class="button pequeno" id="login">
                 <i class="material-icons small">person</i>Login
             </a>

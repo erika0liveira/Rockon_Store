@@ -3,10 +3,6 @@
     flex-direction: column;
 }
 
-h1{
-    color: var(--branco);
-}
-
 .login-container form{
     display: flex;
     flex-direction: column;

@@ -108,6 +108,10 @@ input{
     padding: 1rem;
 }
 
+input:focus{
+    border: solid .5rem var(--cinza-claro);
+}
+
 button,
 .button,
 button:focus,
