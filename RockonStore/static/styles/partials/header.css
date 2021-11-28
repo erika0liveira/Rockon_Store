@@ -1,5 +1,5 @@
 header.cabecalho{
-    background-color: rgb(10, 17, 48);
+    background-color: var(--azul-escuro);
     
     width: 100%;
 
@@ -27,7 +27,7 @@ header.cabecalho .logo img{
 }
 
 header.cabecalho .pesquisa{
-    background-color: white;
+    background-color: var(--branco);
     
     display: flex;
     align-items: center;
@@ -47,7 +47,7 @@ header.cabecalho .pesquisa .separador{
     height: 100%;
     
     width: .2rem;
-    background-color: grey;
+    background-color: var(--cinza);
 }
 
 header.cabecalho .pesquisa form{
@@ -58,7 +58,7 @@ header.cabecalho .pesquisa form{
 }
 
 header.cabecalho .pesquisa form #campo-pesquisa{
-    box-shadow: 0 0 0 30px #FFFFFF inset;
+    box-shadow: 0 0 0 30px var(--branco) inset;
     outline: none;
     border: none;
 
@@ -69,21 +69,54 @@ header.cabecalho .pesquisa form #campo-pesquisa{
 }
 
 header.cabecalho .pesquisa form button{
-    background-color: #FFFFFF;
+    background-color: var(--branco);
     height: 100%;
 }
 
-header.cabecalho .menu #icone-menu{
+header.cabecalho .menu{
     display: flex;
     justify-content: right;
 }
 
+header.cabecalho .menu>*{
+    margin-left: 1rem;
+}
+
+header.cabecalho .menu a#cadastro{
+    text-decoration: none;
+    background-color: var(--azul);
+    color: var(--preto);
+}
+
+header.cabecalho .menu a#cadastro:hover{
+    background-color: var(--azul-claro);
+}
+
+header.cabecalho .menu a#login{
+    text-decoration: none;
+    background-color: var(--verde);
+    color: var(--preto);
+}
+
+header.cabecalho .menu a#login:hover{
+    background-color: var(--verde-claro);
+}
+
+header.cabecalho .menu a#logout{
+    text-decoration: none;
+    background-color: var(--vermelho);
+    color: var(--preto);
+}
+
+header.cabecalho .menu a#logout:hover{
+    background-color: var(--vermelho-claro);
+}
+
 header.cabecalho .menu #icone-menu i{
-    color: white;
+    color: var(--branco);
 }
 
 header.cabecalho h1{
     margin: 0;
     box-sizing: border-box;
 }
-

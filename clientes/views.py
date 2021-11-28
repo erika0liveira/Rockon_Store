@@ -1,20 +1,21 @@
 from django.shortcuts import redirect, render
-from django.contrib.auth.models import User, AbstractUser
 from django.contrib import auth
-from .models import Usuario
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User, AbstractUser
+User = get_user_model()
 
 def cadastro(request):
     # Teste para verificar se o método POST em cadastro.html está funcionando certo, se sim vai para a pág de login
     if request.method == 'POST':
         nome = request.POST['nome']
         sobrenome = request.POST['sobrenome']
-        Usuario.documento == request.POST['documento']
-        Usuario.endereco == request.POST['endereco']
-        Usuario.numero == request.POST['numero']
-        Usuario.cep == request.POST['cep']
+        documento = request.POST['documento']
+        endereco = request.POST['endereco']
+        numero = request.POST['numero']
+        cep = request.POST['cep']
         email = request.POST['email']
-        senha = request.POST['password']
-        senha2 = request.POST['password2']
+        senha = request.POST['senha']
+        senha2 = request.POST['senha2']
         if not nome.strip():
             print('O campo nome não pode ficar em branco')
             return redirect('cadastro')
@@ -27,9 +28,19 @@ def cadastro(request):
         if Usuario.objects.filter(email=email).exists():
             print('Usuário já cadastrado')
             return redirect('cadastro')
-        user = Usuario.objects.create_user(username=nome, email=email, password=senha)
-        user.save()
-        print('Usuário cadastrado com sucesso')
+        else:
+            user = User.objects.create_user(
+                username = nome,
+                first_name = nome,
+                last_name = sobrenome,
+                documento = documento,
+                email = email,
+                password = senha,
+                cep = cep,
+                endereco = endereco,
+                numero = numero,)
+            user.save()
+            print('Usuário cadastrado com sucesso')
         return redirect('login')
     else:
         return render(request,'clientes/cadastro.html')
