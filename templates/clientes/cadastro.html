@@ -7,7 +7,7 @@
 
 <div class="container container-medio cadastro-container">
     <h1>Cadastro de Usuário</h1>
-    <form action="#" method="POST">
+    <form action="{% url 'cadastro' %}" method="POST">
         {% csrf_token %}
         <h2>Dados Pessoais</h2>
         <div class="info pessoal">

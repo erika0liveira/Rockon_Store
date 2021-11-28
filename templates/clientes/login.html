@@ -5,7 +5,7 @@
 
 <div class="container container-pequeno login-container">
     <h1>Fazer Login</h1>
-    <form action="#" method="POST">
+    <form action="{% url 'login' %}" method="POST">
         {% csrf_token %} <!-- Próprio do Django para segurança contra ataques CSRF-->
         <label for="email">E-mail</label>
         <input type="text" name="email" id="email">
