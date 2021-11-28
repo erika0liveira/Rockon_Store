@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 from django.contrib import auth
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User, AbstractUser
+from .models import Usuario
 User = get_user_model()
 
 def cadastro(request):

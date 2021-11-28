@@ -5,6 +5,10 @@
 
 <div class="container container-pequeno login-container">
     <h1>Fazer Login</h1>
+
+    {% if not request.user.is_authenticated %}
+    <p>Faça login ou cadastre-se para verificar o carrinho</p>
+
     <form action="{% url 'login' %}" method="POST">
         {% csrf_token %} <!-- Próprio do Django para segurança contra ataques CSRF-->
         <label for="email">E-mail</label>
@@ -15,6 +19,8 @@
 
         <button type="submit" class="grande"><i class="material-icons">person</i>Entrar</button>
     </form>
+
+    {% endif %}
 
     <div class="cadastro"><a href="{% url 'cadastro' %}" class="button">Fazer Cadastro</a></div>
 </div>
