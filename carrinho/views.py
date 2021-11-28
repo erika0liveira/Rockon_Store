@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from django.urls.converters import register_converter
 
-# Create your views here.
+def carrinho(request):
+    return render(request, "carrinho/carrinho.html")
+    
