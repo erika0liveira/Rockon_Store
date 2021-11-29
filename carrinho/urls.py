@@ -6,6 +6,6 @@ app_name = "carrinho"
 
 urlpatterns = [
     path("", carrinho, name="carrinho"),
-    path("add/<int:produto_id>/", carrinho_add, name="add"),
-    path("remove/<int:produto_id>/", carrinho_remove, name="remove"),
+    path("carrinho_add/<int:produto_id>/", carrinho_add, name="add"),
+    path("carrinho_remove/<int:produto_id>/", carrinho_remove, name="remove"),
 ]

@@ -1,5 +1,8 @@
+from django.shortcuts import get_object_or_404
+from django.views.generic import DetailView, ListView
 from django.shortcuts import render
-from .models import Produto
+from .models import Produto, Categoria
+
 
 def index(request):
     context = {'produtos': Produto.objects.all()}
@@ -31,3 +34,29 @@ def busca(request):
         # Definir algo para quando não houver um termo
         else:
             pass
+
+    
+def ProdutoDetailView(DetailView):
+    QuerySet = Produto.available.all()
+    extra = {"form": CarrinhoAddProdutoForm()}
+
+
+class ProductListView(ListView):
+    category = None
+    paginate_by = 6
+
+    def get_queryset(self):
+        queryset = Produto.available.all()
+
+        categoria_slug = self.kwargs.get("slug")
+        if categoria_slug:
+            self.categoria = get_object_or_404(Categoria, slug=categoria_slug)
+            queryset = queryset.filter(categoria=self.categoria)
+
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["caterogia"] = self.categoria
+        context["categorias"] = Categoria.objects.all()
+        return context

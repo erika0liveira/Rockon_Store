@@ -1,0 +1,22 @@
+footer.rodape{
+    background-color: var(--azul-escuro);
+
+    height: 8.5rem;
+    width: 100%;
+    padding: 2rem 6rem;
+    margin-top: 2rem;
+
+    position: absolute;
+    bottom: 0;
+}
+
+footer.rodape .content{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: var(--branco);
+}

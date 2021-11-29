@@ -1,4 +1,5 @@
 {% extends 'partials/_base.html' %}
+{% load static %}
 {% load widget_tweaks %}
 
 
@@ -21,31 +22,12 @@
             <h2 id="preco">R$ {{ item.preco }}</h2>
             <p class="descricao">{{ item.descricao }}</p>
 
-            <!--<button id="adicionar-carrinho" class="grande">
-                <i  class="material-icons small">add_shopping_cart</i>Adicionar ao carrinho 
-            </button>-->
-
-            <form class="form-group" action="{% url 'carrinho:add' item.id %}" method="POST">
-                {% csrf_token %}
-                <input type="hidden" name="teste_id" value="{{ item.id }}">
-                <input type="hidden" name="teste_nome" value="{{ item.nome_produto }}">
-
-                <button type="submit" id="adicionar-carrinho" class="grande">
-                 <i class="material-icons small">add_shopping_cart</i>Adicionar ao carrinho
+            <form action="{% url 'carrinho:add' item.id %}" method="POST">
+                <button id="adicionar-carrinho" class="grande">
+                    {% csrf_token %}
+                    <i  class="material-icons small">add_shopping_cart</i>Adicionar ao carrinho 
                 </button>
             </form>
-
-
-       
-
-
-
-
-
-
-
-
-
 
             <button id="comprar" class="grande">
                 <i class="material-icons small">check_circle</i> Comprar

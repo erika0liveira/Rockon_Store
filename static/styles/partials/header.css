@@ -1,0 +1,122 @@
+header.cabecalho{
+    background-color: var(--azul-escuro);
+    
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding: 2rem 6rem;
+
+    font-size: 1.5rem;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1;
+}
+
+header.cabecalho .logo{
+    height: 4.5rem;
+    width: 10rem;
+}
+
+header.cabecalho .logo img{
+    max-height: 4.5rem;
+}
+
+header.cabecalho .pesquisa{
+    background-color: var(--branco);
+    
+    display: flex;
+    align-items: center;
+    
+    height: 4rem;
+    width: 40rem;
+    padding: 1rem;
+    border-radius: 10px;
+    
+    box-sizing: border-box;
+}
+
+
+header.cabecalho .pesquisa .separador{
+    margin: 0 .5rem;
+    
+    height: 100%;
+    
+    width: .2rem;
+    background-color: var(--cinza);
+}
+
+header.cabecalho .pesquisa form{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+}
+
+header.cabecalho .pesquisa form #campo-pesquisa{
+    box-shadow: 0 0 0 30px var(--branco) inset;
+    outline: none;
+    border: none;
+
+    height: 100%;
+    width: 100%;
+
+    font-size: 1.5rem;
+}
+
+header.cabecalho .pesquisa form button{
+    background-color: var(--branco);
+    height: 100%;
+}
+
+header.cabecalho .menu{
+    display: flex;
+    justify-content: right;
+}
+
+header.cabecalho .menu>*{
+    margin-left: 1rem;
+}
+
+header.cabecalho .menu a#cadastro{
+    text-decoration: none;
+    background-color: var(--azul);
+    color: var(--preto);
+}
+
+header.cabecalho .menu a#cadastro:hover{
+    background-color: var(--azul-claro);
+}
+
+header.cabecalho .menu a#login{
+    text-decoration: none;
+    background-color: var(--verde);
+    color: var(--preto);
+}
+
+header.cabecalho .menu a#login:hover{
+    background-color: var(--verde-claro);
+}
+
+header.cabecalho .menu a#logout{
+    text-decoration: none;
+    background-color: var(--vermelho);
+    color: var(--preto);
+}
+
+header.cabecalho .menu a#logout:hover{
+    background-color: var(--vermelho-claro);
+}
+
+header.cabecalho .menu #icone-menu i{
+    color: var(--branco);
+}
+
+header.cabecalho h1{
+    margin: 0;
+    box-sizing: border-box;
+}

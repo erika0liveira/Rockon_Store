@@ -39,6 +39,8 @@ INSTALLED_APPS = [
 
     # Terceiros
     'widget_tweaks',
+    "debug_toolbar",
+    'model_utils',
     
     # Default
     'django.contrib.admin',
@@ -57,6 +59,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'RockonStore.urls'
@@ -149,3 +153,5 @@ AUTH_USER_MODEL = 'clientes.Usuario'
 
 CARRINHO_SESSION_ID = "carrinho"
 MAXIMO_PRODUTOS = 20
+
+INTERNAL_IPS = ('127.0.0.1:8000',)
