@@ -28,6 +28,8 @@ class Carrinho:
             )
 
             yield item
+    
+            
 
     def __len__(self):
         return sum(item["quantidade"] for item in self.carrinho.values())
@@ -37,7 +39,7 @@ class Carrinho:
     
         if produto_id not in self.carrinho:
             self.carrinho[produto_id] = {
-                "quantidade": 0,
+                "quantidade": 1,
                 "preco": str(produto.preco),
             }
       

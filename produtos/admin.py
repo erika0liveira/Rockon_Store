@@ -2,7 +2,6 @@ from django.contrib import admin
 from django.db.models.fields import BooleanField
 from .models import Produto
 
-
 class ListandoProdutos(admin.ModelAdmin):
     list_display = ('id', 'nome_produto', 'categoria', 'preco', 'disponivel')
     list_display_links = ('id', 'nome_produto')

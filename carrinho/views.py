@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.views.decorators.http import require_POST
 from produtos.models import Produto
 
+
 from .carrinho import Carrinho
 from .forms import CarrinhoAddProdutoForm
 
@@ -18,6 +19,7 @@ def carrinho_add(request, produto_id):
             produto=produto, quantidade=cd["quantidade"], override_quantity=cd["override"]
         )
 
+    request.session.modified = True    
     return redirect("carrinho:carrinho")
 
 
@@ -31,4 +33,6 @@ def carrinho_remove(request, produto_id):
 
 def carrinho(request):
     carrinho = Carrinho(request)
+    request.session.modified = True
     return render(request, "carrinho/carrinho.html", {"carrinho": carrinho})
+    

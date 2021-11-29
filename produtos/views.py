@@ -1,5 +1,8 @@
+from django.db.models.query import QuerySet
 from django.shortcuts import render
 from .models import Produto
+from carrinho.forms import CarrinhoAddProdutoForm
+from django.views.generic import DetailView
 
 def index(request):
     context = {'produtos': Produto.objects.all()}
@@ -31,3 +34,8 @@ def busca(request):
         # Definir algo para quando não houver um termo
         else:
             pass
+
+    
+def ProdutoDetailView(DetailView):
+    QuerySet = Produto.available.all()
+    extra = {"form": CarrinhoAddProdutoForm()}
