@@ -52,3 +52,56 @@
     background-color: var(--verde-claro);
 }
 
+/* Controlador de quantidade para adicionar o produto no carrinho */
+/* REFAZER ESSA PORCARIA DE ESTILIZAÇÃO */
+.item-container .infos form #adicionar-carrinho.desabilitado{
+    cursor: not-allowed;
+    opacity: .5;
+}
+
+.item-container .infos form #quantidade{
+    display: flex;
+}
+
+.item-container .infos form #quantidade *{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1rem
+}
+
+
+.item-container .infos form #quantidade #qtde{
+    background-color: var(--branco);
+}
+
+.item-container .infos form #quantidade #qtde::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
+.item-container .infos form #quantidade .contador i{
+    user-select: none;
+}
+
+.item-container .infos form #quantidade #incrementa{
+    background-color: var(--verde);
+}
+
+.item-container .infos form #quantidade #decrementa{
+    background-color: var(--vermelho);
+}
+
+.item-container .infos form #quantidade #incrementa:hover{
+    background-color: var(--verde-claro);
+}
+
+.item-container .infos form #quantidade #decrementa:hover{
+    background-color: var(--vermelho-claro);
+}
+
+.item-container .infos form #quantidade .contador i{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

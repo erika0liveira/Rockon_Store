@@ -22,8 +22,21 @@
             <h2 id="preco">R$ {{ item.preco }}</h2>
             <p class="descricao">{{ item.descricao }}</p>
 
+            
             <form action="{% url 'carrinho:add' item.id %}" method="POST">
-                <button id="adicionar-carrinho" class="grande">
+                <label for="qtde">Quantidade</label>
+                <div id="quantidade">
+                    <div class="button contador" id="decrementa">
+                        <i class="material-icons small">remove_circle_outline</i>
+                    </div>
+                    <input type="number" name="qtde" id="qtde" value="0" disabled="disabled">
+                    <div class="button contador" id="incrementa">
+                        <i class="material-icons small">add_circle_outline</i>
+                    </div>
+                    
+                </div>
+
+                <button id="adicionar-carrinho" class="desabilitado grande" disabled="disabled">
                     {% csrf_token %}
                     <i  class="material-icons small">add_shopping_cart</i>Adicionar ao carrinho 
                 </button>
@@ -35,4 +48,5 @@
 
         </div>
     </div>
+    <script src="{% static 'scripts/item_quantidade.js' %}"></script>
 {% endblock %}
