@@ -1,0 +1,38 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container form{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container form label{
+    color: var(--branco);
+}
+
+/* Ajustar no JS para habilitar e desabilitar o botão */
+.login-container form button.desabilitado{
+    background-color: red;
+}
+
+.login-container form button.desabilitado:hover{
+    cursor: not-allowed;
+}
+
+.login-container form button{
+    background-color: var(--verde);
+}
+
+.login-container form button:hover{
+    background-color: var(--verde-claro);
+    cursor: pointer;
+}
+
+.login-container .cadastro{
+    width: 100%;
+    
+    display: inline-flex;
+    justify-content: center;
+}

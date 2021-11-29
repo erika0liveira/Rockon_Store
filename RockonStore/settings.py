@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # Terceiros
     'widget_tweaks',
     "debug_toolbar",
+    'model_utils',
     
     # Default
     'django.contrib.admin',
@@ -153,4 +154,4 @@ AUTH_USER_MODEL = 'clientes.Usuario'
 CARRINHO_SESSION_ID = "carrinho"
 MAXIMO_PRODUTOS = 20
 
-INTERNAL_IPS = ('127.0.0.1',)
+INTERNAL_IPS = ('127.0.0.1:8000',)

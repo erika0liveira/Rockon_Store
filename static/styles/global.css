@@ -1,34 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     border: none;
     text-decoration: none;
     box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
+    color: var(--preto);
+    margin: 0;
 }
 
 html{
-    /* --background: #cfcfcf; */
-    --background: #F6FAFF;
-    --background-modal: #040911cc;
-    --black: #0d114f;
-    --blue: #3485FF;
-    --grey-blue: #A1B2CD;
-    --grey-dark: #4D5E77;
-    --grey-light: #E5EAF1; 
-    --grey-medium: #EAECF1;
-    --icon-details: #A5B0C1;
-    --light-blue: #E0ECFF;
-    --overlay: #040911;
-    --red: #E83F5B;
-    --white: #FAFAFA;
+    --azul: #0889D5;
+    --azul-claro: #63BBEE;
+    --azul-escuro: #0A1130;
+    --branco: #FFFFFF;
+    --cinza: #808080;
+    --cinza-claro: #CACACA;
+    --cinza-escuro: #252525;
+    --preto: #000000;
+    --preto-transparente: #00000080;
+    --verde: #00A365;
+    --verde-claro: #63EE81;
+    --vermelho: #9e0000;
+    --vermelho-claro: #EE4848;
 
     /* Transforma o padrão de pixels do navegador para 10px. Antes eram 16px*/
     font-size: 62.5%;
-  }
+}
   
-  body{
-    height: 100vh;
-  }
+body{
+    position: relative;
+    height: 100%;
+    min-height: 100vh;
+    padding-bottom: 14.5rem;
+}
   
 .sr-only{
     position: absolute;
@@ -41,5 +49,111 @@ html{
     white-space: nowrap;
     border-width: 0;
 }
-  
-  
+
+.container{
+    padding: 5rem;
+    margin: auto;
+    margin-top: 6rem;
+    box-sizing: border-box;
+    
+    display: grid;
+    justify-items:  center;
+
+    background-color: var(--preto-transparente);
+    backdrop-filter: blur(.3rem);
+    border-radius: 1rem;
+}
+
+.container-grande{
+    width: 80%;
+}
+
+.container-medio{
+    width: 60%;
+}
+
+.container-pequeno{
+    width: 30%;
+}
+
+h1{
+    font-weight: 700;
+    line-height: 4.2rem;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+h2{
+    font-weight: 700;
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+}
+
+p,
+label,
+input,
+button,
+.button{
+    font-size: 1.5rem;
+}
+
+input{
+    height: 5rem;
+
+    margin-bottom: 3rem;
+    border-radius: .5rem;
+
+    outline: none;
+
+    padding: 1rem;
+}
+
+input:focus{
+    border: solid .5rem var(--cinza-claro);
+}
+
+button,
+.button,
+button:focus,
+.button:focus{
+    height: 5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem !important;
+    border-radius: .5rem;
+
+    outline: none;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.grande{
+    width: 32.5rem;    
+}
+
+.medio{
+    width: 21.25rem;
+}
+
+.pequeno{
+    width: 10rem;    
+}
+
+/* Tamanho de icones Materialize */
+i.large {
+    font-size: 6rem;
+}
+
+i.medium {
+    font-size: 3rem;
+}
+
+i.small {
+    font-size: 2rem;
+}
+
+i.tiny {
+    font-size: 1rem;
+}
+/* Tamanho de icones Materialize - FIM */

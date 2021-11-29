@@ -1,0 +1,43 @@
+.index-container{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    z-index: -2;
+}
+
+.index-container a{
+    text-decoration: none;
+    color: var(--preto);
+    margin-bottom: 5rem;
+}
+
+.index-container .card{
+    height: 35rem;
+    width: 22rem;
+
+    border-radius: 1rem;
+    padding: 2rem;
+
+    background-color: var(--cinza-claro);
+}
+
+.index-container .card:hover{
+    box-shadow: -.5rem .5rem 1rem .2rem var(--cinza-escuro);
+    transition-duration: .3s;
+}
+
+.index-container .card .img{
+    height: 18rem;
+    width: 18rem;
+    display: flex;
+    justify-content: center;
+}
+
+.index-container .card .img img{
+    max-height: 18rem;
+    max-width: 18rem;
+}
+
+.index-container .card .separador{
+    background-color: var(--preto);
+    height: .1rem;
+    margin: 1rem 0 1rem 0;
+}

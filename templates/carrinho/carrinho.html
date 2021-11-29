@@ -23,23 +23,14 @@
             <tr>
                 <td class="align-middle">
                     <a target="_blank" class="text-decoration-none" href="{{ produto.get_absolute_url }}">
-                        {{ nome_produto }}
+                        {{ produto }}
                     </a>
                 </td>
                 <td class="align-middle">
-                    <form action="{% url 'carrinho:add' produto.id %}" method="post">
-                        {% csrf_token %}
-                        <div class="form-row">
-                           
-                            <div class="col">
-                                <input class="btn btn-info" type="submit" value="Atualizar">
-                            </div>
-                        </div>
-                        {{ produto.update_quantity_form.override }}
-                    </form>
+                    {{ item.quantidade }}
                 </td>
-                <td class="align-middle">R$ {{ produto.preco }}</td>
-                <td class="align-middle">R$ {{ produto.preco_total }}</td>
+                <td class="align-middle">R$ {{ item.preco }}</td>
+                <td class="align-middle">R$ {{ item.total }}</td>
                 <td class="align-middle text-right">
                     <form action="{% url 'carrinho:remove' produto.id %}" method="post">
                         {% csrf_token %}
@@ -53,7 +44,7 @@
                 <td class="font-weight-bold">Total</td>
                 <td></td>
                 <td></td>
-                <td class="font-weight-bold">R$ {{ carrinho.get_preco_total }}</td>
+                <td class="font-weight-bold">R$ {{ carrinho.get_total_preco }}</td>
                 <td></td>
             </tr>
         </tbody>

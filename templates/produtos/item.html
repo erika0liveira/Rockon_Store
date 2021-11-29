@@ -23,7 +23,7 @@
             <p class="descricao">{{ item.descricao }}</p>
 
             <form action="{% url 'carrinho:add' item.id %}" method="POST">
-                <button type="submit" id="adicionar-carrinho" class="grande">
+                <button id="adicionar-carrinho" class="grande">
                     {% csrf_token %}
                     <i  class="material-icons small">add_shopping_cart</i>Adicionar ao carrinho 
                 </button>

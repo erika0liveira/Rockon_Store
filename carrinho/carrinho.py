@@ -20,26 +20,33 @@ class Carrinho:
         for produto in produtos:
             carrinho[str(produto.id)]["produto"] = produto
 
-        for item in carrinho.values():
-            item["preco"] = Decimal(item["preco"])
-            item["total"] = item["quantidade"] * item["preco"]
-            item["atualiza_quantidade_form"] = CarrinhoAddProdutoForm(
-                initial={"quantidade": item["quantidade"], "override": True}
+        for produto in carrinho.values():
+            produto["preco"] = Decimal(produto["preco"])
+            produto["total"] = produto["quantidade"] * produto["preco"]
+            produto["atualiza_quantidade_form"] = CarrinhoAddProdutoForm(
+                initial={"quantidade": produto["quantidade"], "override": True}
             )
 
-            yield item
-    
-            
+            print(produto["produto"])
+            yield produto
+
+    def get_total_preco(self):
+        total = 0
+        for produto in self.carrinho.values():
+            produto["preco"] = Decimal(produto["preco"])
+            produto["total"] = produto["quantidade"] * produto["preco"]
+            total += produto["total"]
+        return total
 
     def __len__(self):
-        return sum(item["quantidade"] for item in self.carrinho.values())
+        return sum(produto["quantidade"] for produto in self.carrinho.values())
 
     def add(self, produto, quantidade=1, override_quantity=False):
         produto_id = str(produto.id)
     
         if produto_id not in self.carrinho:
             self.carrinho[produto_id] = {
-                "quantidade": 1,
+                "quantidade": 0,
                 "preco": str(produto.preco),
             }
       
@@ -62,7 +69,7 @@ class Carrinho:
 
     def total(self):
         return sum(
-            Decimal(item["preco"]) * item["quantidade"] for item in self.carrinho.values()
+            Decimal(produto["preco"]) * produto["quantidade"] for produto in self.carrinho.values()
         )
 
     def save(self):
