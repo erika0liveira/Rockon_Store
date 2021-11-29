@@ -25,14 +25,12 @@
                 <i  class="material-icons small">add_shopping_cart</i>Adicionar ao carrinho 
             </button>-->
 
-            <form class="form-group" action="{% url 'carrinho:add' produto.id %}" method="post">
-                <button type="submit" id="adicionar-carrinho" class="grande">
-                    <p class="form-inline">
-                        {{ form.quantity.label_tag }}
-                        {% render_field form.quantity class+="form-control ml-sm-3" %}
-                        {{ form.override }}
-                    </p>
+            <form class="form-group" action="{% url 'carrinho:add' item.id %}" method="POST">
                 {% csrf_token %}
+                <input type="hidden" name="teste_id" value="{{ item.id }}">
+                <input type="hidden" name="teste_nome" value="{{ item.nome_produto }}">
+
+                <button type="submit" id="adicionar-carrinho" class="grande">
                  <i class="material-icons small">add_shopping_cart</i>Adicionar ao carrinho
                 </button>
             </form>

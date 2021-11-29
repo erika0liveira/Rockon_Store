@@ -8,6 +8,7 @@ from .forms import CarrinhoAddProdutoForm
 
 @require_POST
 def carrinho_add(request, produto_id):
+    print(f'View carrinho_add: {request.POST}')
     carrinho = Carrinho(request)
     produto = get_object_or_404(Produto, id=produto_id)
 
@@ -30,5 +31,8 @@ def carrinho_remove(request, produto_id):
 
 
 def carrinho(request):
+
+    print(f'View carrinho: {request.POST}')
+
     carrinho = Carrinho(request)
     return render(request, "carrinho/carrinho.html", {"carrinho": carrinho})

@@ -147,5 +147,5 @@ MEDIA_URL = '/media/'
 
 AUTH_USER_MODEL = 'clientes.Usuario'
 
-CART_SESSION_ID = "carrinho"
+CARRINHO_SESSION_ID = "carrinho"
 MAXIMO_PRODUTOS = 20
