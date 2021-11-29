@@ -1,4 +1,6 @@
 {% extends 'partials/_base.html' %}
+{% load widget_tweaks %}
+
 
 <!--{% load static %}-->
 {% block content %}
@@ -19,9 +21,33 @@
             <h2 id="preco">R$ {{ item.preco }}</h2>
             <p class="descricao">{{ item.descricao }}</p>
 
-            <button id="adicionar-carrinho" class="grande">
-                <i class="material-icons small">add_shopping_cart</i>Adicionar ao carrinho 
-            </button>
+            <!--<button id="adicionar-carrinho" class="grande">
+                <i  class="material-icons small">add_shopping_cart</i>Adicionar ao carrinho 
+            </button>-->
+
+            <form class="form-group" action="{% url 'carrinho:add' produto.id %}" method="post">
+                <button type="submit" id="adicionar-carrinho" class="grande">
+                    <p class="form-inline">
+                        {{ form.quantity.label_tag }}
+                        {% render_field form.quantity class+="form-control ml-sm-3" %}
+                        {{ form.override }}
+                    </p>
+                {% csrf_token %}
+                 <i class="material-icons small">add_shopping_cart</i>Adicionar ao carrinho
+                </button>
+            </form>
+
+
+       
+
+
+
+
+
+
+
+
+
 
             <button id="comprar" class="grande">
                 <i class="material-icons small">check_circle</i> Comprar

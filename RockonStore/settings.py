@@ -36,6 +36,9 @@ INSTALLED_APPS = [
     'produtos',
     'clientes',
     'carrinho',
+
+    # Terceiros
+    'widget_tweaks',
     
     # Default
     'django.contrib.admin',
@@ -143,3 +146,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 AUTH_USER_MODEL = 'clientes.Usuario'
+
+CART_SESSION_ID = "carrinho"
+MAXIMO_PRODUTOS = 20
