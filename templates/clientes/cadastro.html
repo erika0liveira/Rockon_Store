@@ -4,6 +4,7 @@
 {% block content %}
 
 <!-- Início da área de formulário para cadastro -->
+<link rel="stylesheet" href="{% static 'styles/clientes/cadastro.css' %}">
 
 <div class="container container-medio cadastro-container">
     <h1>Cadastro de Usuário</h1>
@@ -62,11 +63,13 @@
                 <input type="password" class="grande" id="senha2" name="senha2">
             </div>
         </div>
-        <button type="submit" class="grande">
-            <i class="material-icons small">person_add</i> Concluir Cadastro</button>
+        <button type="submit" class="grande" id="cadastro">
+            <i class="material-icons small">person_add</i>Concluir Cadastro
+        </button>
     </form>
 </div>
 
+<script src="{% static 'scripts/clientes/cadastro.js' %}"></script>
 <!-- Fim da área de formulário para cadastro -->
 
 {% endblock %}

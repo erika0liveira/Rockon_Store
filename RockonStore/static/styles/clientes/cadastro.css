@@ -28,11 +28,16 @@
     margin: 2.5rem;
 }
 
-.cadastro-container form button{
+.cadastro-container form button#cadastro{
     margin-left: 2.5rem;
     background-color: var(--azul);
 }
 
-.cadastro-container form button:hover{
+.cadastro-container form button#cadastro.habilitado:hover{
     background-color: var(--azul-claro);
+    cursor: pointer;
+}
+
+.cadastro-container form button#cadastro.desabilitado:hover{
+    cursor: not-allowed;
 }

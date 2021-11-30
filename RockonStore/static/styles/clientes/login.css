@@ -12,22 +12,17 @@
     color: var(--branco);
 }
 
-/* Ajustar no JS para habilitar e desabilitar o botão */
-.login-container form button.desabilitado{
-    background-color: red;
-}
-
-.login-container form button.desabilitado:hover{
-    cursor: not-allowed;
-}
-
-.login-container form button{
+.login-container form button#login{
     background-color: var(--verde);
 }
 
-.login-container form button:hover{
+.login-container form button#login.habilitado:hover{
     background-color: var(--verde-claro);
     cursor: pointer;
+}
+
+.login-container form button#login.desabilitado:hover{
+    cursor: not-allowed;
 }
 
 .login-container .cadastro{
